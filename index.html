@@ -1,72 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>CSS Selectors</title>
 
         <style>
-                /* 1. Element Selector Syntax
-                        element{
-                            property:value;
-                        }
-                */
-            div{
+            /* 1. Element Selector Syntax
+                            element{
+                                property:value;
+                            }
+                    */
+            div {
                 height: 200px;
                 width: 200px;
                 background-color: red;
             }
 
-                /* 2. Id Selector Syntax
-                        element#id{
-                            property:value;
-                        }
-                */
-            span#s1{
+            /* 2. Id Selector Syntax
+                            element#id{
+                                property:value;
+                            }
+                    */
+            span#s1 {
                 display: block;
                 width: 200px;
                 height: 200px;
                 background: green;
             }
 
-                /* 3. Class Selector Syntax
-                        element.id{
-                            property:value;
-                        }
-                */
-            span.c1{
+            /* 3. Class Selector Syntax 
+                            element.id{
+                                property:value;
+                            }
+                    */
+            span.c1 {
                 display: block;
                 width: 200px;
                 height: 200px;
                 background: purple;
             }
 
-                /* 4. Attribute Selector Syntax
-                        element[name="value"]{
-                            property:value;
-                        }
-                */
-            a[href="https://www.google.com"]{
+            /* 4. Attribute Selector Syntax
+                            element[name="value"]{
+                                property:value;
+                            }
+                    */
+            a[href="https://www.google.com"] {
                 display: block;
                 width: 200px;
                 height: 200px;
                 background: yellow;
             }
-                /* 5. Universal Selector Syntax
-                        *{
-                            property:value;
-                        }
-                */
-            *{
+
+            /* 5. Universal Selector Syntax 
+                            *{
+                                property:value;
+                            }
+                    */
+            * {
                 border: 10px solid #000;
             }
 
-            /*img{
-                border: 10px solid yellow;
+             /* 6. Group/Combinational Selector Syntax
+                            element1,element2,element3....{
+                                property:value;
+                            }
+                    */
+
+            div,span#s1,span.c1,a[href="https://www.google.com"]{
+                display: inline-block;
             }
-            img#a{
-                border: 10px dashed grey;
-            }*/
+
+            /* 7. Pesudo Element Selector Syntax 
+                            element1::selector{
+                                property:value;
+                            }
+                    */
+            h1::after{
+                content: url('https://i.pinimg.com/originals/aa/f7/f2/aaf7f2bb862a0004acad5bff2b08d927.gif');
+            }
+
+            h2::before{
+                content: url('https://www.goodlightscraps.com/content/smiley-gif/smiley-7.gif');
+            }
+
+            /* 8. Pesudo class Selector Syntax 
+                            element1:selector{
+                                property:value;
+                            }
+                    */
+            div#d1:hover{
+                background-color: green;
+            }
         </style>
     </head>
 
@@ -75,8 +102,9 @@
         <span id="s1"> 2.Id Selector # </span>
         <span class="c1"> 3.Class Selector . </span>
         <a href="https://www.google.com"> 4.Attribute Selector </a>
-
-        <img src="./3.jpg">
-        <img src="./2.jpg" id="a">
+        <h1> 7.Pesudo Element Selector ::</h1>
+        <h2> 7.Pesudo Element Selector ::</h2>
+        <div id="d1"> 8. Pesudo class Selector </div>
     </body>
+
 </html>
