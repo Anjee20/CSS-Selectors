@@ -3,24 +3,45 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>CSS Introduction</title>
+        <title>CSS Selectors</title>
 
         <style>
+            /* 1.Element Selector Syntax
+                    element{
+                        property:value;
+                    }
+             */
             div{
-                color: red;
-                font-size: 30px;
+                height: 200px;
+                width: 200px;
+                background-color: red;
             }
-            img{
+
+            /* 2.Id Selector Syntax
+                    element{
+                        property:value;
+                    }
+             */
+            span#s1{
+                display: block;
+                width: 200px;
+                height: 200px;
+                background: green;
+            }
+
+            /*img{
                 border: 10px solid yellow;
             }
             img#a{
                 border: 10px dashed grey;
-            }
+            }*/
         </style>
     </head>
 
     <body>
-        <div> Welcome to CSS Training </div>
+        <div> 1.Element Selector </div>
+        <span id="s1"> 2.Id Selector. # </span>
+        
         <img src="./3.jpg">
         <img src="./2.jpg" id="a">
     </body>
