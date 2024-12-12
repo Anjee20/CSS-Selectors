@@ -6,27 +6,59 @@
         <title>CSS Selectors</title>
 
         <style>
-            /* 1.Element Selector Syntax
-                    element{
-                        property:value;
-                    }
-             */
+                /* 1. Element Selector Syntax
+                        element{
+                            property:value;
+                        }
+                */
             div{
                 height: 200px;
                 width: 200px;
                 background-color: red;
             }
 
-            /* 2.Id Selector Syntax
-                    element{
-                        property:value;
-                    }
-             */
+                /* 2. Id Selector Syntax
+                        element#id{
+                            property:value;
+                        }
+                */
             span#s1{
                 display: block;
                 width: 200px;
                 height: 200px;
                 background: green;
+            }
+
+                /* 3. Class Selector Syntax
+                        element.id{
+                            property:value;
+                        }
+                */
+            span.c1{
+                display: block;
+                width: 200px;
+                height: 200px;
+                background: purple;
+            }
+
+                /* 4. Attribute Selector Syntax
+                        element[name="value"]{
+                            property:value;
+                        }
+                */
+            a[href="https://www.google.com"]{
+                display: block;
+                width: 200px;
+                height: 200px;
+                background: yellow;
+            }
+                /* 5. Universal Selector Syntax
+                        *{
+                            property:value;
+                        }
+                */
+            *{
+                border: 10px solid #000;
             }
 
             /*img{
@@ -40,8 +72,10 @@
 
     <body>
         <div> 1.Element Selector </div>
-        <span id="s1"> 2.Id Selector. # </span>
-        
+        <span id="s1"> 2.Id Selector # </span>
+        <span class="c1"> 3.Class Selector . </span>
+        <a href="https://www.google.com"> 4.Attribute Selector </a>
+
         <img src="./3.jpg">
         <img src="./2.jpg" id="a">
     </body>
